@@ -1,0 +1,6 @@
+Whoosh==2.7.4
+lxml==4.6.3
+nltk==3.6.2
+progress==1.6
+redis==3.5.3
+requests==2.26.0

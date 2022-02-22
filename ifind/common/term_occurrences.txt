@@ -1,0 +1,3 @@
+hello 10
+goodbye 10
+world 20

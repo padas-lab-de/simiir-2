@@ -1,0 +1,50 @@
+<userConfiguration id="smartuser">
+
+	<algorithm class="MarkovChain">
+        <attribute name="model_type" type="string" value="None" is_argument="true" />
+        <attribute name="transition_matrix" type="string" value="" is_argument="true" />
+        <attribute name="states" type="string" value="" is_argument="true" />
+    </algorithm>
+	
+	<queryGenerator class="SmarterQueryGenerator">
+		<attribute name="stopword_file" type="string" value="../example_data/terms/stopwords.txt" is_argument="true" />
+	</queryGenerator>
+
+	<textClassifiers>
+		<snippetClassifier class="StochasticInformedTrecTextClassifier">
+           <attribute name="qrel_file" type="string" value="../example_data/qrels/trec2005.qrels.all" is_argument="true" />
+            <attribute name="rprob" type="float" value="0.75" is_argument="true" />
+            <attribute name="nprob" type="float" value="0.35" is_argument="true" />
+			<attribute name="data_handler" type="integer" value="0" is_argument="false" />
+		</snippetClassifier>
+
+		<documentClassifier class="StochasticInformedTrecTextClassifier">
+            <attribute name="qrel_file" type="string" value="../example_data/qrels/trec2005.qrels.all" is_argument="true" />
+            <attribute name="rprob" type="float" value="0.85" is_argument="true" />
+            <attribute name="nprob" type="float" value="0.25" is_argument="true" />
+			<attribute name="data_handler" type="integer" value="0" is_argument="false" />
+		</documentClassifier>
+	</textClassifiers>
+
+	<stoppingDecisionMaker class="SequentialNonrelDecisionMakerSkip">
+        <attribute name="nonrelevant_threshold" type="integer" value="3" is_argument="true" />
+	</stoppingDecisionMaker>
+	
+	<logger class="FixedCostLogger">
+		<attribute name="time_limit" type="integer" value="600" is_argument="true" />
+		<attribute name="query_cost" type="integer" value="10" is_argument="true" />
+		<attribute name="document_cost" type="integer" value="20" is_argument="true" />
+		<attribute name="snippet_cost" type="integer" value="3" is_argument="true" />
+		<attribute name="serp_results_cost" type="integer" value="5" is_argument="true" />
+		<attribute name="mark_document_cost" type="integer" value="3" is_argument="true" />
+	</logger>
+	
+	<searchContext class="SearchContext">
+		<attribute name="relevance_revision" type="integer" value="1" is_argument="false" />
+	</searchContext>
+	
+	<serpImpression class="SimpleSERPImpression">
+		<attribute name="qrel_file" type="string" value="../example_data/qrels/trec2005.qrels.all" is_argument="true" />
+	</serpImpression>
+
+</userConfiguration>

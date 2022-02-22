@@ -1,0 +1,15 @@
+Pillow==8.3.2
+PyYAML==5.4.1
+Whoosh==2.7.4
+beautifulsoup4==4.10.0
+datrie==0.8.2
+jsonpickle==2.0.0
+lxml==4.6.3
+nltk==3.6.2
+numpy
+progress==1.6
+pytz==2021.1
+redis==3.5.3
+requests==2.26.0
+scipy
+six==1.16.0
