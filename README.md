@@ -1,20 +1,20 @@
-# Simiir 2.0
+# SimIIR 2.0
 
-Simiir 2.0 is a Python-based framework for building and evaluating Interactive Information Retrieval (IIR). 
-The framework was originally released by Leif Azzopardi (2015) Simiir(https://github.com/leifos/simiir) 
+SimIIR 2.0 is a Python-based framework for building and evaluating interactive information retrieval (IIR). 
+The framework was originally released by Leif Azzopardi (2015) SimIIR(https://github.com/leifos/simiir) 
 
 This is an updated version to support Python3 and include several datasets. 
-Simiir 2.0 also implements a suite of state-of-the-art algorithms and baselines for session-based simulation.
+SimIIR 2.0 also implements a suite of state-of-the-art algorithms and baselines for session-based simulation.
 
 
 ## Installation
-Add the ifind and simiir library to your PYTHONPATH.
+Add the ifind and SimIIR library to your PYTHONPATH.
 
 To determine the performance of the output of the simulations automatically, you will need to download trec_eval(http://trec.nist.gov/trec_eval/)
 
 Add trec_eval to your PATH.
 
-    #### ifind and simiir
+    #### ifind and SimIIR
     export PYTHONPATH="${PYTHONPATH}:/pathTo/ifind:/pathTo/simiir"
 
     #### trec_user
