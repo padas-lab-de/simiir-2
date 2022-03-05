@@ -82,7 +82,7 @@ It currently lets the simulated user do two actions: query and examine a documen
 
 Note: the simulator acts as a broker to query and fetch documents, and controls the flow of actions (i.e., querying, examining snippets, assessing documents, marking documents as relevant).
 
-At the moment only one search interface is specified which connects to a Whoosh-based index of TREC documents.
+So far, one search interface is specified which connects to a Whoosh-based index of TREC documents.
 
 
 
