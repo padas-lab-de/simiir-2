@@ -18,7 +18,7 @@ Add trec_eval to your PATH.
     #### trec_user
     export PATH="/pathTo/trec_eval-9.0.7:$PATH"
 
-Create a virtual environment with the packages in the requirements.txt (note it is the same as the one for ifind).
+Create a virtual environment with the packages in requirements.txt (this is the same as the one for ifind).
 
 ## Example of Experiments
 
