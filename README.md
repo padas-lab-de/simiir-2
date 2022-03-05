@@ -39,7 +39,7 @@ The output of the simulations will be in example_sims/output.
 
 ## simulation.xml files
 
-You will see that a simulation takes four main elements:
+A simulation requires four main elements: output, topics, users, and a search interface.
 
 ### output
 This is where the output of the simulation is to be stored.
@@ -55,35 +55,34 @@ You can include each topic that you would like the simulated users to undertake.
 ### users
 A set of sample users have been created and included in example_sims/users.
 
-You can include however many users you would like to use the searchInterface, and the topics specified.
+You can include however many users you would like to use the searchInterface for the specified topics.
 
 Each of the users have been configured differently to show how the different components can be set to instantiate different simulated users.
 
     #### trec_user
     Submits one query, the topic title.
 
-    Examines each snippet, and each document, and considers them relevant.
+    Examines each snippet and each document, and considers them relevant.
 
     #### fixed_depth_user
 
-    Submits three word queries - generated from the topic description
+    Submits three word queries -- generated from the topic description
 
     Examines to a fixed depth, initially set to 10.
 
-    Each snippet that the simulated user examines, it stochastically decides whether it should examine it or not, based on the specified probabilities.
+    For each snippet that the fixed_depth_user examines, it stochastically decides whether it should examine the document or not based on the specified probabilities.
 
-    Each document that the simulated user examines, it stochastically decides whether it should mark it as relevant or not, based on the specified probabilities.
+    For each document that the fixed_depth_user examines, it stochastically decides whether it should mark it as relevant or not based on the specified probabilities.
 
 
-### searchInterface
+### search interface
 The search interface is a programmatic representation of the search interface an actual user would use.
 
 It currently lets the simulated user do two actions: query and examine a document.
 
-Note: the simulator acts as an broker to query and fetch documents, and controls the flow of actions, i.e.
-querying, examining snippets, assessing documents, marking documents as relevant, etc.
+Note: the simulator acts as a broker to query and fetch documents, and controls the flow of actions (i.e., querying, examining snippets, assessing documents, marking documents as relevant).
 
-At the moment only one search interface is specified which connects to a Whoosh Based Index of TREC documents.
+At the moment only one search interface is specified which connects to a Whoosh-based index of TREC documents.
 
 
 
