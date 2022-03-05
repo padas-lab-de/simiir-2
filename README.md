@@ -20,9 +20,9 @@ Add trec_eval to your PATH.
 
 Create a virtual environment with the packages in requirements.txt (this is the same as the one for ifind).
 
-## Example of Experiments
+## Example of experiments
 
-make a directory called output in example_sims
+Create a directory called output in example_sims
 
 cd into the simiir directory, and run:
 
