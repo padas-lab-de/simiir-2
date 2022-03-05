@@ -34,7 +34,7 @@ or
 
 You will see the simulations running where the simulated users use either BM25 or PL2.
 
-The output of the simulations will be in example_sims/output
+The output of the simulations will be in example_sims/output.
 
 
 ## simulation.xml files
@@ -43,8 +43,7 @@ You will see that a simulation takes four main elements:
 
 ### output
 This is where the output of the simulation is to be stored.
-If you do not want (or have not installed trec_eval) then you can set trec_eval to false,
-and it will not automatically evaluate the output of the simulations.
+If you do not want to use trec_eval, set trec_eval to false and it will not automatically evaluate the output of the simulations.
 
 
 ### topics
@@ -56,7 +55,7 @@ You can include each topic that you would like the simulated users to undertake.
 ### users
 A set of sample users have been created and included in example_sims/users.
 
-You can include however many users you would like to user the searchInterface, and the topics specified.
+You can include however many users you would like to use the searchInterface, and the topics specified.
 
 Each of the users have been configured differently to show how the different components can be set to instantiate different simulated users.
 
