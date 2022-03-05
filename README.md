@@ -8,7 +8,7 @@ SimIIR 2.0 supports Python3 and includes several datasets and simulation algorit
 ## Installation
 Add the ifind and SimIIR library to your PYTHONPATH.
 
-To evaluate the effectiveness of the simulated sessions, you will need to download trec_eval(http://trec.nist.gov/trec_eval/).
+To evaluate the effectiveness of the simulated sessions, you will need to download trec_eval [http://trec.nist.gov/trec_eval/].
 
 Add trec_eval to your PATH.
 
