@@ -37,7 +37,7 @@ You will see the simulations running where the simulated users use either BM25 o
 The output of the simulations will be in example_sims/output.
 
 
-## simulation.xml files
+## Configuration via simulation.xml files
 
 A simulation requires four main elements: output, topics, users, and a search interface.
 
