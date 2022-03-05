@@ -2,7 +2,7 @@
 
 SimIIR 2.0 extends the Python-based SimIIR framework for simulating interactive information retrieval (IIR) that was originally released by Leif Azzopardi and David Maxwell [https://github.com/leifos/simiir]. 
 
-SimIIR 2.0 supports Python3 and includes several datasets and simulation algorithms for querying and other interactions.
+SimIIR 2.0 supports Python3 and includes several datasets and additional simulation algorithms for querying and other user interactions.
 
 
 ## Installation
