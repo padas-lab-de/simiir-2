@@ -1,16 +1,14 @@
 # SimIIR 2.0
 
-SimIIR 2.0 is a Python-based framework for building and evaluating interactive information retrieval (IIR). 
-The framework was originally released by Leif Azzopardi (2015) SimIIR(https://github.com/leifos/simiir) 
+SimIIR 2.0 extends the Python-based SimIIR framework for simulating interactive information retrieval (IIR) that was originally released by Leif Azzopardi and David Maxwell [https://github.com/leifos/simiir]. 
 
-This is an updated version to support Python3 and include several datasets. 
-SimIIR 2.0 also implements a suite of state-of-the-art algorithms and baselines for session-based simulation.
+SimIIR 2.0 supports Python3 and includes several datasets and simulation algorithms for querying and other interactions.
 
 
 ## Installation
 Add the ifind and SimIIR library to your PYTHONPATH.
 
-To determine the performance of the output of the simulations automatically, you will need to download trec_eval(http://trec.nist.gov/trec_eval/)
+To evaluate the effectiveness of the simulated sessions, you will need to download trec_eval(http://trec.nist.gov/trec_eval/).
 
 Add trec_eval to your PATH.
 
@@ -20,7 +18,7 @@ Add trec_eval to your PATH.
     #### trec_user
     export PATH="/pathTo/trec_eval-9.0.7:$PATH"
 
-Create a virtual environment with the packages in the requirements.txt (note it is the same as the one for ifind)
+Create a virtual environment with the packages in the requirements.txt (note it is the same as the one for ifind).
 
 ## Example of Experiments
 
