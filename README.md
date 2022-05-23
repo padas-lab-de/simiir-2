@@ -6,7 +6,7 @@ SimIIR 2.0 supports Python3 and includes several datasets and additional simulat
 
 ## Framework Architecture
 
-![The architecture of our extended SimIIR framework, with the components split across both simulation and user categories. Simulation components define the simulation — a representation of some real‐world user study, with user components defining the behavior of simulated users.](https://github.com/padre-lab-eu/extended-simiir/blob/main/simiir2_architecture.png)
+![The architecture of our extended SimIIR framework, with the components split across both simulation and user categories. Simulation components define the simulation — a representation of some real‐world user study, with user components defining the behavior of simulated users.](https://github.com/padre-lab-eu/extended-simiir/blob/main/simiir2.png)
 
 ## Installation
 
@@ -27,7 +27,7 @@ Create a virtual environment with the packages in requirements.txt (this is the 
 ## Dataset
 
 We employ a benchmark dataset in our experiments: the User Search Session DataSet (SUSS) dataset.
-The dataset is publicly available at http://dx.doi.org/10.7802/1.
+The dataset is publicly available at [http://dx.doi.org/10.7802/1].
 
 SimIIR simulate user search session using only a list of five major actions: QUERY (i.e., formulating a query), SERP (i.e., viewing the search result page), SNIPPET (i.e., viewing the document’s metadata), DOC (i.e., viewing the full document’s content) and MARK (i.e., marking the document as relevant or not). We therefore cluster SUSS’s list of actions and pages into broader groups to match the actions we have available in SimIIR (e.g., "QUERY"
 action in SimIIR represents the group of actions "issue a first query", "reformulate a query" and "click query suggestion" in SUSS) and remove the non-search related actions (e.g., visiting the home page).
@@ -66,6 +66,15 @@ You can include each topic that you would like the simulated users to undertake.
 
 
 ### users
+
+A user configuration file contains several parameters that describe user search behavior:
+* **queryGenerator** allows to define which strategy the user is adapting to generate his/her queries. 
+* **textClassifiers** denotes the method used to assess a document/snippet for relevance. 
+* **stoppingDecisionMaker** defines the stopping decision point at which the user stops interacting with the SERP. 
+* **logger** denotes the amount of time required for the user to interact with the system. 
+* **searchContext** keeps track of all the user's interaction with the system. 
+* **serpImpression** is responsible for determining whether the presented SERP is relevant enough to enter and examine in more detail.
+
 A set of sample users have been created and included in example_sims/users.
 
 You can include however many users you would like to use the searchInterface for the specified topics.
