@@ -4,8 +4,12 @@ SimIIR 2.0 extends the Python-based SimIIR framework for simulating interactive 
 
 SimIIR 2.0 supports Python3 and includes several datasets and additional simulation algorithms for querying and other user interactions.
 
+## Framework Architecture
+
+![The architecture of our extended SimIIR framework, with the components split across both simulation and user categories. Simulation components define the simulation — a representation of some real‐world user study, with user components defining the behavior of simulated users.](https://github.com/padre-lab-eu/extended-simiir/blob/main/simiir2_architecture.png)
 
 ## Installation
+
 Add the ifind and SimIIR library to your PYTHONPATH.
 
 To evaluate the effectiveness of the simulated sessions, you will need to download trec_eval [http://trec.nist.gov/trec_eval/].
@@ -19,6 +23,16 @@ Add trec_eval to your PATH.
     export PATH="/pathTo/trec_eval-9.0.7:$PATH"
 
 Create a virtual environment with the packages in requirements.txt (this is the same as the one for ifind).
+
+## Dataset
+
+We employ a benchmark dataset in our experiments: the User Search Session DataSet (SUSS) dataset.
+The dataset is publicly available at http://dx.doi.org/10.7802/1.
+
+SimIIR simulate user search session using only a list of five major actions: QUERY (i.e., formulating a query), SERP (i.e., viewing the search result page), SNIPPET (i.e., viewing the document’s metadata), DOC (i.e., viewing the full document’s content) and MARK (i.e., marking the document as relevant or not). We therefore cluster SUSS’s list of actions and pages into broader groups to match the actions we have available in SimIIR (e.g., "QUERY"
+action in SimIIR represents the group of actions "issue a first query", "reformulate a query" and "click query suggestion" in SUSS) and remove the non-search related actions (e.g., visiting the home page).
+
+However, any other user behavior dataset can be used to analyze search session logs and extract user-types models following the same method.
 
 ## Example of experiments
 
@@ -48,7 +62,6 @@ If you do not want to use trec_eval, set trec_eval to false and it will not auto
 
 ### topics
 A set of sample topics have been included in example_data/topics.
-
 You can include each topic that you would like the simulated users to undertake.
 
 
