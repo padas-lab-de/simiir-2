@@ -1,6 +1,5 @@
 from simiir.query_generators.base_generator import BaseQueryGenerator
 import requests
-import json
 import urllib.parse
 
 class GoogleSuggestGenerator(BaseQueryGenerator):
@@ -21,7 +20,7 @@ class GoogleSuggestGenerator(BaseQueryGenerator):
 
         for i in range(1, self.__max_depth):
             response = requests.get('https://suggestqueries.google.com/complete/search?&output=firefox&hl=en&gl=us&q=' + urllib.parse.quote_plus(generated_queries[-1][0]))
-            suggestions_web = json.loads(response.content)
+            suggestions_web = response.json()
             queries = suggestions_web[1]
             if len(queries) < 2:
                 break

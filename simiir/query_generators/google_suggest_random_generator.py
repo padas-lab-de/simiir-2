@@ -1,6 +1,6 @@
 from simiir.query_generators.base_generator import BaseQueryGenerator
 import requests
-import json
+import random
 import urllib.parse
 
 class GoogleSuggestRandomGenerator(BaseQueryGenerator):
@@ -21,10 +21,10 @@ class GoogleSuggestRandomGenerator(BaseQueryGenerator):
 
         for i in range(1, self.__max_depth):
             response = requests.get('https://suggestqueries.google.com/complete/search?&output=firefox&hl=en&gl=us&q=' + urllib.parse.quote_plus(generated_queries[-1][0]))
-            suggestions_web = json.loads(response.content)
+            suggestions_web = response.json()
             queries = suggestions_web[1]
             if len(queries) < 2:
                 break
-            generated_queries.append((queries[1], 1))
-
+            del queries[0]
+            generated_queries.append((random.choice(queries), 1))
         return generated_queries
