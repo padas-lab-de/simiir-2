@@ -26,7 +26,7 @@ Create a virtual environment with the packages in requirements.txt (this is the 
 
 ## Dataset
 
-We employ a benchmark dataset in our experiments: the User Search Session DataSet (SUSS) dataset.
+In our experiments, we use the Sowiport User Search Session dataset (SUSS) dataset.
 The dataset is publicly available at [http://dx.doi.org/10.7802/1].
 
 SimIIR simulate user search session using only a list of five major actions: QUERY (i.e., formulating a query), SERP (i.e., viewing the search result page), SNIPPET (i.e., viewing the document’s metadata), DOC (i.e., viewing the full document’s content) and MARK (i.e., marking the document as relevant or not). We therefore cluster SUSS’s list of actions and pages into broader groups to match the actions we have available in SimIIR (e.g., "QUERY"
